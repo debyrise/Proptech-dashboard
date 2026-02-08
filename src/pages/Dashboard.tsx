@@ -13,7 +13,7 @@ const Dashboard = () => {
     <React.Fragment>
 
         <div className="mt-5">
-          <h2 className="font-bold  text-lg pl-5">Welcome, Ahmed</h2>
+          <h2 className="font-bold  text-lg pl-5 md:pl-12">Welcome, Ahmed</h2>
 
         </div>
        <Card className="w-full rounded-2xl p-3 md:p-6  items-center mt-5">
@@ -23,41 +23,42 @@ const Dashboard = () => {
      <div className="flex items-center gap-2 flex-col md:flex-row">
    
 
-   <div className=" w-[85%]  ">
-        <CardHeader className=" gap-4 ">
-                <div className="flex items-center justify-between">
-                <CardTitle className="text-base md:text-xl">Sales Overview
+      <div className=" w-[85%]  ">
+       <CardHeader className="gap-4 ">
+  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+    
+    <CardTitle className="text-base md:text-xl">
+      Sales Overview
+      <p className="text-sm text-muted-foreground">
+        Showing overview Jan 2022 - Sep 2022
+      </p>
+    </CardTitle>
 
-                    <p className="text-sm text-muted-foreground">
-                    Showing overview Jan 2022 - Sep 2022
-                </p>
-                </CardTitle>
-                
+    <div className="flex flex-wrap items-center sm:ml-auto gap-2">
+      <Button
+        variant="outline"
+        className="rounded-full text-xs md:text-sm w-full sm:w-auto"
+      >
+        View Transactions
+      </Button>
+    </div>
+  </div>
 
-                <div className="flex flex-wrap items-center gap-2">
-                <Button variant="outline" className="rounded-full text-xs md:text-sm">
-                    View Transactions
-                </Button>
-                 </div>
+  <div className="flex items-center justify-center sm:justify-end rounded-full bg-muted p-1 text-xs md:text-sm overflow-x-auto">
+    {["1 Week", "1 Month", "1 Year"].map((item, i) => (
+      <button
+        key={item}
+        className={cn(
+          "rounded-full px-3 py-1 whitespace-nowrap transition",
+          i === 2 ? "bg-white shadow-sm" : "text-muted-foreground"
+        )}
+      >
+        {item}
+      </button>
+    ))}
+  </div>
+</CardHeader>
 
-
-                
-                </div>
-
-                 <div className="ml-auto flex items-end rounded-full bg-muted p-1 text-xs md:text-sm">
-                    {["1 Week", "1 Month", "1 Year"].map((item, i) => (
-                    <button
-                        key={item}
-                        className={cn(
-                        "rounded-full px-3 py-1 transition",
-                        i === 2 ? "bg-white shadow-sm" : "text-muted-foreground"
-                        )}
-                    >
-                        {item}
-                    </button>
-                    ))}
-                </div>
-            </CardHeader>
 
 
         
