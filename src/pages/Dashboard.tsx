@@ -16,7 +16,7 @@ const Dashboard = () => {
           <h2 className="font-bold  text-lg pl-5">Welcome, Ahmed</h2>
 
         </div>
-       <Card className="w-full rounded-2xl p-3 md:p-6 bg-slate-400 items-center mt-5">
+       <Card className="w-full rounded-2xl p-3 md:p-6  items-center mt-5">
       
        
 
