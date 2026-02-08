@@ -11,28 +11,40 @@ import React from "react"
 const Dashboard = () => {
   return (
     <React.Fragment>
-       <Card className="w-full rounded-2xl  items-center">
+
+        <div className="mt-5">
+          <h2 className="font-bold  text-lg pl-5">Welcome, Ahmed</h2>
+
+        </div>
+       <Card className="w-full rounded-2xl p-3 md:p-6 bg-slate-400 items-center mt-5">
       
        
 
-<div className="flex items-center gap-2 flex-col md:flex-row">
-
+     <div className="flex items-center gap-2 flex-col md:flex-row">
+   
 
    <div className=" w-[85%]  ">
-                    <CardHeader className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-                <div>
-                <CardTitle className="text-lg md:text-xl">Sales Overview</CardTitle>
-                <p className="text-sm text-muted-foreground">
+        <CardHeader className=" gap-4 ">
+                <div className="flex items-center justify-between">
+                <CardTitle className="text-base md:text-xl">Sales Overview
+
+                    <p className="text-sm text-muted-foreground">
                     Showing overview Jan 2022 - Sep 2022
                 </p>
-                </div>
+                </CardTitle>
+                
 
                 <div className="flex flex-wrap items-center gap-2">
                 <Button variant="outline" className="rounded-full text-xs md:text-sm">
                     View Transactions
                 </Button>
+                 </div>
 
-                <div className="flex rounded-full bg-muted p-1 text-xs md:text-sm">
+
+                
+                </div>
+
+                 <div className="ml-auto flex items-end rounded-full bg-muted p-1 text-xs md:text-sm">
                     {["1 Week", "1 Month", "1 Year"].map((item, i) => (
                     <button
                         key={item}
@@ -45,15 +57,13 @@ const Dashboard = () => {
                     </button>
                     ))}
                 </div>
-                </div>
             </CardHeader>
 
 
         
                 <div className="flex flex-col lg:flex-row gap-5">
-                    {/* Chart Section */}
-                    <div className="w-full lg:w-2/3">
-                    <div className="h-[220px] w-full rounded-lg border bg-muted/20 p-4 text-center text-sm text-muted-foreground">
+                    <div className="w-full lg:w-2/3 ">
+                    <div className="h-[250px] w-full  rounded-lg border bg-muted/20 p-2 md:p-5 text-center text-sm text-muted-foreground">
                         <SalesChart />
                     </div>
                     </div>
@@ -61,7 +71,7 @@ const Dashboard = () => {
                 
 
 
-            <div className="flex flex-col md:flex-row gap-5 mt-10 md-mt-0">
+            <div className="flex flex-col md:flex-row gap-5 mt-10 md-mt-0 ">
                 <div className="flex flex-col gap-3 w-full  md:w-1/2">
                     <StatCard
                     amount="₦120,000,000.00"
@@ -167,7 +177,7 @@ type StatProps = {
 
 function StatCard({ title, amount, colour, percent, positive = true }: StatProps) {
   return (
-    <div className="rounded-xl border  bg-background">
+    <div className="rounded-xl border p-5 md:p-5  bg-white">
       <h3 className={`mt-1 text-lg  font-semibold ${colour}`}>{amount}</h3>
 
 

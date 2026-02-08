@@ -39,7 +39,7 @@ const SalesChart = () => {
         onClick={scrollRight}
         className="absolute right-2 top-1/2 -translate-y-1/2 z-10 rounded-full bg-gray-300 p-2 shadow hover:bg-gray-100"
       >
-        <Play size={14} />
+        <Play size={12} />
       </button>
 
       {/* Scrollable container */}
@@ -48,7 +48,7 @@ const SalesChart = () => {
         className="overflow-x-auto scrollbar-hide"
       >
         {/* Give the chart a fixed width so only Jan–Sep fits in view */}
-        <div className="h-[240px] w-[90%]"> {/* Adjust width to fit 9 months */}
+        <div className="h-[200px] w-[96%]"> {/* Adjust width to fit 9 months */}
           <ResponsiveContainer width="100%" height="100%">
             <BarChart
               data={data}

@@ -1,17 +1,20 @@
-import { Calculator, SlidersHorizontal, TrendingUp } from "lucide-react"
-import { Button } from "./ui/button"
+import { Calculator, SlidersHorizontal, TrendingUp } from "lucide-react";
+import { Button } from "./ui/button";
 
 type BudgetingProps = {
-  onClose: () => void   
-}
+  onClose: () => void;
+};
 
-
-
-const Budgeting =({ onClose }: BudgetingProps) => {   
-
+const Budgeting = ({ onClose }: BudgetingProps) => {
   return (
-    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/60 p-2  sm:p-4"        onClick={onClose}   >
-      <div className="w-[80%] max-w-sm sm:max-w-md overflow-hidden rounded-t-2xl sm:rounded-2xl bg-white shadow-xl" onClick={(e) => e.stopPropagation()}   >
+    <div
+      className="fixed inset-0 z-50 flex items-center sm:items-center justify-center bg-black/60 p-2  sm:p-4"
+      onClick={onClose}
+    >
+      <div
+        className="w-[80%] max-w-sm sm:max-w-md overflow-hidden rounded-t-2xl sm:rounded-2xl bg-white shadow-xl"
+        onClick={(e) => e.stopPropagation()}
+      >
         {/* Top dark section */}
         <div className="relative h-28 sm:h-40 bg-gradient-to-br from-slate-900 to-slate-800">
           <div className="absolute inset-0 flex items-center justify-center">
@@ -45,14 +48,14 @@ const Budgeting =({ onClose }: BudgetingProps) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 type FeatureProps = {
-  title: string
-  desc: string
-  icon: React.ReactNode
-}
+  title: string;
+  desc: string;
+  icon: React.ReactNode;
+};
 
 function Feature({ title, desc, icon }: FeatureProps) {
   return (
@@ -67,7 +70,6 @@ function Feature({ title, desc, icon }: FeatureProps) {
         <p className="text-xs sm:text-sm text-gray-500">{desc}</p>
       </div>
     </div>
-  )
+  );
 }
-export default Budgeting
-
+export default Budgeting;

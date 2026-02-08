@@ -74,36 +74,36 @@ const NavBar = () => {
       {mobileMenuOpen && (
         <div className="md:hidden bg-[#105b48] text-white flex flex-col gap-2 px-4 py-2">
           <Link to={"/Budgeting"}>
-            <div className="p-2 rounded-full hover:bg-[#0e4c3d] transition">
-              <img src={Budgeting} alt="" />
+            <div className="p-2 rounded-full hover:bg-[#0e4c3d] flex items-center gap-3 transition">
+              <img src={Budgeting} alt="" /> Budgeting
 
             </div>
           </Link>
 
           <Link to={"/Calender"}>
-            <div className="p-2 rounded-full hover:bg-[#0e4c3d] transition">
-              <img src={calender} alt=""/>
+            <div className="p-2 rounded-full hover:bg-[#0e4c3d] items-center gap-3 flex transition">
+              <img src={calender} alt=""/>Calender
             </div>
           </Link>
 
-          <div className="p-2 rounded-full hover:bg-[#0e4c3d] transition">
-             <img src={calender} alt=""/>
+         
 
-          </div>
-
-           <div className="p-2 rounded-full hover:bg-[#0e4c3d] transition">
+           <div className="p-2 rounded-full hover:bg-[#0e4c3d] items-center gap-3 flex transition">
              <img src={activity} alt=""/>
-
+              Search
           </div>
 
 
-          <div className="p-2 rounded-full hover:bg-[#0e4c3d] transition">
+          <div className="p-2 rounded-full hover:bg-[#0e4c3d]  items-center gap-3 flex transition">
           <img src={payout} alt=""/>
-
+          
+           Payout
           </div>
 
-          <div className="p-2 rounded-full hover:bg-[#0e4c3d] transition">
+          <div className="p-2 rounded-full hover:bg-[#0e4c3d] items-center gap-3 transition flex">
           <img src={market} alt=""/>
+                      Market Place
+
 
           </div>
         </div>
